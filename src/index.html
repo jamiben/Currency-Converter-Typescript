@@ -12,27 +12,28 @@
         <h1>Currency converter in typescript</h1>
     </header>
     <main>
+        <h2 class="title2">Choose the currency and the amount to get exchange rate !</h2>
         <form action="">
             <div class="contentFirst">
-                <select name="" id="choice1">
-                </select>
+                <div class="contentSelectSymbol">
+                    <span id="symbol1">&</span>
+                    <select name="" id="choice1"></select>
+                </div>
                 <div class="contentInp">
                     <label for="" class="firstValue"></label>
                     <div class="contentInpSpan">
-                        <span id="symbol1">&</span>
-                        <input type="number" id="inpChoice1" step="0.00001" placeholder="euro = 0">
+                        <input type="number" id="input1" step="0.00001" placeholder="euro = 0">
                     </div>
                 </div>     
             </div>        
             <div class="contentSec">
-                <select name="" id="choice2">
-                </select>
+                <div class="contentSelectSymbol">
+                    <span id="symbol2">&</span>
+                    <select name="" id="choice2"></select>
+                </div>
                 <div class="contentInp">
                     <label for="" class="firstValue"></label>
-                    <div class="contentInpSpan"> 
-                        <span id="symbol2">&</span>
-                        <input type="number" id="inpChoice2" step="0.00001" placeholder="dollar = 0">
-                    </div>
+                        <input  id="input2" step="0.00001" placeholder="dollar = 0">
                 </div>
                 <p id="Presult"></p> 
                 <p id="Pfirstvalue"></p> 
