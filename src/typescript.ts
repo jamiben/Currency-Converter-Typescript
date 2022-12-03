@@ -11,8 +11,6 @@ const symbol2 = (document.querySelector("#symbol2") as HTMLElement);
 const input1 = (document.querySelector("#input1") as HTMLInputElement);
 let input2 = (document.querySelector("#input2") as HTMLInputElement);
 const submit = (document.querySelector("#submit") as HTMLButtonElement);
-let affichage = (document.querySelector("#Presult") as HTMLElement).innerText;
-
 const startValue = (document.querySelector("#startValue") as HTMLOptionElement);
 const compar = (document.querySelector("#compar") as HTMLOptionElement);
 
@@ -36,11 +34,11 @@ for( i=0; i <= tabOptions.length -1; i++ ){
 
 submit.onclick = function submit() {
     event?.preventDefault(); 
-    
+        let error = (document.querySelector("#error")as HTMLSpanElement);
+        console.log(error)
         const input1 = (document.querySelector("#input1") as HTMLInputElement).value;
         let symbol1 = (document.querySelector("#symbol1") as HTMLSpanElement).innerHTML;
-        // const target1 = event?.target as HTMLSelectElement;
-        let result: number | string;
+        let result: number;
         const valueInp: number = parseFloat(input1);
         let rating1 = select1.value;
         let rating2 = select2.value;
@@ -104,8 +102,10 @@ submit.onclick = function submit() {
                 break;         
         };
 
+        error.innerHTML = "";
+
         if (rating1 === rating2){
-            result = 'is not possible to converte with same rating, please select an other manny';
+            error!.innerHTML = 'is not possible to converte with same rating, please select an other money';
         }
 
             // console.log(target1.value);
