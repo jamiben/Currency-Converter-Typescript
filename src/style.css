@@ -21,6 +21,7 @@ main{
 form{
     border: solid 1px red;
     padding: 3%;
+    text-align: center;
 }
 .contentFirst, .contentSec{
     border: solid 5px yellow;
@@ -32,16 +33,12 @@ form{
     border-radius: 0px 5px 5px 0px;
     border: solid 1px;
     border-left: 0px;
-
-    /* position: relative; */
 }
 select {
     background-color: white;
     padding: 50%;
+}
 
-}
-option{
-}
 .contentSelectSymbol{
     display: flex;
     margin-bottom: 5%;
@@ -49,6 +46,15 @@ option{
     overflow: hidden;
     width: 100%;
     /* position: relative; */
+}
+#swap{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #f0f0f0, #dad8d8);
+    box-shadow:  8px 8px 16px #bebebe,
+                -8px -8px 16px #ffffff;
 }
 #symbol1, #symbol2{
     border: 1px solid black;
@@ -72,7 +78,7 @@ input{
     overflow: hidden;
 }
 .fa-solid{
-    border: solid red;
+    /* border: solid red; */
     font-size: 2rem;
     transform: rotate(90deg);
     text-align:start;
@@ -80,7 +86,7 @@ input{
     left: 0;
     position: relative;
 }
-button{
+#submit{
     width: 100%;
     padding: 3%;
     border: none;
@@ -90,7 +96,7 @@ button{
     margin-top:5%;
     background-color: rgba(143, 188, 143, 0.585);
 }
-button:hover{
+#submit:hover{
     height: 70px;
     background-color: rgb(155, 215, 155);
 }
@@ -99,5 +105,68 @@ button:hover{
     padding: 3%;
 }
 
+/*/////////////////* tablette between //////////////////////*/
+@media only screen and (min-width: 799px) and (max-width: 965px) {
+    
+    input{
+        margin-bottom: 0;
+    }
+
+    /* border: solid royalblue;
+    border: solid orange;
+    border: solid 3px yellow; */
+
+
+}
+/*/////////////////* desktop  à after 966px//////////////////////*/
+@media only screen and (min-width: 966px){
+    html{
+        font-size: 35px;
+        height: 100vh;
+    }
+    body{
+        height: 100vh;
+        border: solid 3px;
+        overflow: hidden;
+
+    }
+    main{
+        height: 100%;
+    }
+    form{
+        height: 100%;
+        margin-bottom: 0;
+        height: 100vh;
+    }
+    .itemsForm{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 30%;
+    }
+
+    .contentFirst, .contentSec{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;       
+    }
+    input{
+        margin-bottom: 0;
+    }
+    #symbol1, #symbol2{
+        border: 1px solid black;
+        width: 7%;
+        padding: 3%;
+        border-radius: 5px 0px 0px 5px;
+    }
+    #swap{
+    }
+    .fa-solid{
+        font-size: 1rem;
+
+    }
+}
 
 
