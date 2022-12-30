@@ -61,13 +61,55 @@
 // :::::::::::: Supprimer les nombres paires d'un tableau ::::::://
 const tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-function filterOdd(tableau: number[]){
-    let tab2 = [];
-    for(i = 0; i < tableau[i]; i++){
-        tab2[i] = tableau[i] %2 !== 0;
-    }
+// function filterOdd(tableau: number[]){
+//     let tab2 = [];
+//     for(i = 0; i < tableau[i]; i++){
+//         tab2[i] = tableau[i] %2 !== 0;
+//     }
+//     console.log(tableau[i % tableau.length  ]);
+//     return tab2[i];
+// }
+// console.log("coucou " + filterOdd(tab));
 
-    console.log(tableau[i % tableau.length  ]);
-    return tab2[i];
+
+
+// retirer les voyelles d'une tableau
+let alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// function indexOf(tab: string){
+//         return tab.replace(/[AEIOUY]/gi, '');
+//     }
+// console.log(indexOf(alfabet))
+
+
+
+let indexOf = (tab:string) =>{
+    let voy = "AEIOUY";
+    let newTab;
+    for(let i=0; i < tab.length; i++){
+        if(tab.includes(voy[i])){
+            newTab = tab.replace(/[AEIOUY]/gi, '');
+        };
+    }
+    return newTab;
 }
-console.log("coucou " + filterOdd(tab));
+console.log(indexOf(alfabet) + '   toto');
+
+
+
+// let arr = [1,56,34,76,78,45,65,23,45,123,7,453];
+
+// let bubble = (tab:number[])=>{
+//     for(let i=0; i<tab.length; i++){
+//         for(let j=0; j<tab.length; j++){
+//             if(tab[i] < tab[j]){
+//                 let stockage = tab[j];
+//                 tab[j] = tab[i];
+//                 // console.log(tab[i])
+//                 tab[i] = stockage;
+//             }
+//         }
+//     }
+//     return tab;
+// }
+// console.log(bubble(arr))
